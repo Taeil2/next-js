@@ -1,4 +1,7 @@
-import Layout from '../../layouts/Layout'
+import Head from '../../components/head'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
+
 import React, { useRef, useEffect } from "react"
 import jexcel from "jexcel-pro"
 // import xls from "@jspreadsheet/xls" // not sure why this is breaking
@@ -29,7 +32,10 @@ export default function JexcelPro() {
   }, null);
  
   return (
-    <Layout title="JExcel Pro">
+    <div>
+      <Head pageName="JExcel Pro" />
+      <Header />
+
       <h1>JExcel Pro</h1>
       <div ref={jexcelRef} />
       <br />
@@ -38,6 +44,8 @@ export default function JexcelPro() {
         value="Download"
         onClick={() => xls(jexcelRef.current, { version: true })}
       />
-    </Layout>
+
+      <Footer />
+    </div>
   );
 }

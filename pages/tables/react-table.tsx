@@ -1,4 +1,7 @@
-import Layout from '../../layouts/Layout'
+import Head from '../../components/head'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
+
 import React from 'react'
 import { useTable } from 'react-table'
  
@@ -44,7 +47,10 @@ export default function ReactTable() {
   } = useTable({ columns, data })
 
   return (
-    <Layout title="React Table">
+    <div>
+      <Head pageName="React Table" />
+      <Header />
+
       <table {...getTableProps()} style={{ border: 'solid 1px blue' }}>
         <thead>
           {headerGroups.map(headerGroup => (
@@ -89,6 +95,8 @@ export default function ReactTable() {
           })}
         </tbody>
       </table>
-    </Layout>
+
+      <Footer />
+    </div>
   )
 }

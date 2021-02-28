@@ -1,4 +1,7 @@
-import Layout from '../../layouts/Layout'
+import Head from '../../components/head'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
+
 import React, { useState } from 'react';
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 
@@ -22,18 +25,23 @@ const AGGrid = () => {
   }
 
   return (
+    <div>
+      <Head pageName="AG Grid Enterprise" />
+      <Header />
+
       <div className="ag-theme-alpine" style={{ height: 400, width: 600 }}>
-        <Layout title="AG Grid">
-          <h1>AG Grid</h1>
-          <AgGridReact
-              onGridReady={onGridReady}
-              rowData={rowData}>
-              <AgGridColumn field="make"></AgGridColumn>
-              <AgGridColumn field="model"></AgGridColumn>
-              <AgGridColumn field="price"></AgGridColumn>
-          </AgGridReact>
-        </Layout>
+        <h1>AG Grid</h1>
+        <AgGridReact
+            onGridReady={onGridReady}
+            rowData={rowData}>
+            <AgGridColumn field="make"></AgGridColumn>
+            <AgGridColumn field="model"></AgGridColumn>
+            <AgGridColumn field="price"></AgGridColumn>
+        </AgGridReact>
       </div>
+
+      <Footer />
+    </div>
   );
 };
 

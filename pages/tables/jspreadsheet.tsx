@@ -1,4 +1,7 @@
-import Layout from '../../layouts/Layout'
+import Head from '../../components/head'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
+
 import React from 'react'
 
 // import jexcel from 'jspreadsheet-ce'
@@ -27,7 +30,10 @@ export default class Jspreadsheet extends React.Component {
 
   render() {
     return (
-      <Layout title="JExcel Pro">>
+      <div>
+        <Head pageName="Jspreadsheet" />
+        <Header />
+
         <div ref={this.wrapper} />
         <br />
         <input
@@ -35,7 +41,9 @@ export default class Jspreadsheet extends React.Component {
           value="Add new row"
           onClick={() => this.addRow()}
         />
-      </Layout>
+
+        <Footer />
+      </div>
     );
   }
 }
@@ -44,35 +52,3 @@ var options = {
   data: [[]],
   minDimensions: [10, 10]
 };
-
-
-
-
-/*
-const Jspreadsheet = () => {
-  const data = [
-    ['Mazda', 2001, 2000],
-    ['Pegeout', 2010, 5000],
-    ['Honda Fit', 2009, 3000],
-    ['Honda CRV', 2010, 6000],
-  ];
-  
-  jspreadsheet(document.getElementById('my-spreadsheet'), {
-      data:data,
-      columns:[
-          { title:'Model', width:300 },
-          { title:'Price', width:80 },
-          { title:'Model', width:100 }
-      ]
-  });
-
-  return (
-    <Layout title="Jspreadsheet">
-      <h1>Jspreadsheet</h1>
-      <div id='my-spreadsheet'></div>
-    </Layout>
-  )
-}
-
-export default Jspreadsheet
-*/

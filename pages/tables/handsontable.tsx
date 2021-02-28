@@ -1,4 +1,6 @@
-import Layout from '../../layouts/Layout'
+import Head from '../../components/head'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
 
 import { HotTable } from '@handsontable/react';
 
@@ -20,12 +22,17 @@ const settings = {
 
 const Handsontable = () => {
   return (
-    <Layout title="Handsontable">
+    <div>
+      <Head pageName="Handsontable" />
+      <Header />
+
       <h1>Handsontable</h1>
       <div id="hot-app">
         <HotTable settings={settings} />
       </div>
-    </Layout>
+
+      <Footer />
+    </div>
   )
 }
 
