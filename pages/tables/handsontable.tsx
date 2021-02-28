@@ -3,6 +3,7 @@ import Header from '../../components/header'
 import Footer from '../../components/footer'
 
 import { HotTable } from '@handsontable/react'
+// import '../../node_modules/handsontable/dist/handsontable.full.css'
 import 'handsontable/dist/handsontable.full.css'
 
 const data = [
