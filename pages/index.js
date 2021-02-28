@@ -15,28 +15,40 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Zenport!
         </h1>
-
-        <div className={styles.grid}>
-          <Link href="/orders">
-            <a className={styles.card}>
-              <h3>Orders &rarr;</h3>
-            </a>
+        <p>Refer to this <a href="https://docs.google.com/spreadsheets/d/1uqbYOnjOCi4x4jwIJtFLb9V7T1C8LhT9DmDc9akSg5k/edit#gid=0" target="_blank">sheet</a>. Jexcel Pro is the paid version of Jspreadsheet.</p>
+        <p>
+          <Link href="/tables/handsontable">
+            <a>Handsontable</a>
           </Link>
-
-          <Link href="/projects">
-            <a className={styles.card}>
-              <h3>Projects &rarr;</h3>
-            </a>
+        </p>
+        <p>
+          <Link href="/tables/ag-grid-community">
+            <a>AG Grid Community</a>
           </Link>
-
-          <Link href="/shipments">
-            <a className={styles.card} >
-              <h3>Shipments &rarr;</h3>
-            </a>
+        </p>
+        <p>
+          <Link href="/tables/ag-grid-enterprise">
+            <a>AG Grid Enterprise</a>
           </Link>
-          
-        </div>
+        </p>
+        <p>
+          <Link href="/tables/jspreadsheet">
+            <a>Jspreadsheet</a>
+          </Link>
+        </p>
+        <p>
+          <Link href="/tables/jexcel-pro">
+            <a>Jexcel Pro</a>
+          </Link>
+        </p>
+        <p>
+          <Link href="/tables/react-table">
+            <a>React Table</a>
+          </Link>
+        </p>
       </main>
+
+
 
       <Footer />
       
