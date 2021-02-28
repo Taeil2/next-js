@@ -4,7 +4,7 @@ import Footer from '../../components/footer'
 
 import React, { useRef, useEffect } from "react"
 import jexcel from "jexcel-pro"
-// import xls from "@jspreadsheet/xls" // not sure why this is breaking
+import xls from "@jspreadsheet/xls" // not sure why this is breaking
 
 import "jexcel-pro/dist/jexcel.css"
 import "jsuites/dist/jsuites.css"

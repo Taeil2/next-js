@@ -2,7 +2,8 @@ import Head from '../../components/head'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 
-import { HotTable } from '@handsontable/react';
+import { HotTable } from '@handsontable/react'
+import 'handsontable/dist/handsontable.full.css'
 
 const data = [
   ["", "Ford", "Volvo", "Toyota", "Honda"],

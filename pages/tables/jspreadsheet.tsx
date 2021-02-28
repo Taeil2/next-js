@@ -4,8 +4,8 @@ import Footer from '../../components/footer'
 
 import React from 'react'
 
-// import jexcel from 'jspreadsheet-ce'
-import jexcel from 'jexcel'
+import jexcel from 'jspreadsheet-ce'
+// import jexcel from 'jexcel'
 import 'jspreadsheet-ce/dist/jexcel.css'
 
 export default class Jspreadsheet extends React.Component {
